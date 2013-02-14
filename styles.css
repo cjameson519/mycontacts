@@ -23,12 +23,18 @@ input.phone {
 	text-align:center;
 }
 body {
-	background:transparent url(img/im.jpg) no-repeat;
+	background:transparent url(img/north.jpg) no-repeat;
 	background-size:1680px;
 }
-h2 {
+h1, p, h2, label {
 	color:white;
 }
 .form-horizontal .control-label {
+	color:white;
+}
+td, th, tr {
+	color:white;
+}
+td a {
 	color:white;
 }

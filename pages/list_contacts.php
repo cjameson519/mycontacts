@@ -5,6 +5,7 @@
 			<th>Name</th>
 			<th>Email</th>
 			<th>Phone</th>
+			<th>Edit / Delete</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -22,6 +23,13 @@ while(($contact = $results->fetch_assoc()) != null) {
 		<td><?php echo $contact_firstname?> <?php echo $contact_lastname?></td>
 		<td><a href="maito:<?php echo $contact_email ?>"><?php echo $contact_email ?></a></td>
 		<td><?php echo format_phone($contact_phone)?></td>
+		<?php echo 	"<td><a href=\"?p=form_edit_contact&id=$contact_id\"><i class='icon-wrench icon-white'></i></a>";
+			echo 	'<form style="display:inline;" method="post" action="./actions/delete.php">';
+			echo	"<input type=\"hidden\" name=\"id\" value=\"$contact_id\"/>";
+			echo	'  ';
+			echo	'<input type="submit" value="Delete" />';
+			echo	"</form>";
+			echo	"</td>"; ?>
 	</tr>
 <?php }
 //close DB
