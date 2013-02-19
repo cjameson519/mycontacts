@@ -1,3 +1,4 @@
+<?php  session_start() ?>
 <?php
 require('../config/db.php');
 require('../lib/functions.php');
@@ -8,6 +9,10 @@ $sql = "UPDATE contacts SET contact_firstname='{$_POST['contact_firstname']}', c
 $conn->query($sql);
 //close connection
 $conn->close();
+$_SESSION['message'] = array(
+		'type' => 'success',
+		'text' => 'Nice Job! *feigns pat on the back*'
+);
 //redirect
 header('Location:../?p=list_contacts');
 ?>

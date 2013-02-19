@@ -9,5 +9,10 @@ $sql = "DELETE FROM contacts WHERE contact_id={$_POST['id']}";
 $conn->query($sql);
 //close
 $conn->close();
+
+$_SESSION['message'] = array(
+		'type' => 'danger',
+		'text' => 'Why! Why! You Animal!'
+);
 //redirect
 header('Location:../?p=list_contacts');

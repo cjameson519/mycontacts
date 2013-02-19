@@ -3,14 +3,17 @@ header {
 	padding-right:10px;
 	font-family:helvitica;
 	border-radius:6px;
+	margin:0px auto;
+	background-size:320px;
 }
 header a {
-	color:#55DE28;
+	color:white;
 	display:inline-block;
 	-webkit-transition:color 1s;
+	font-size:30px;
 }
 header a:hover {
-	color:white;
+	color:#55DE28;
 	-webkit-transform:rotate(5deg);
 	text-decoration:none;
 }
@@ -25,15 +28,18 @@ input.phone {
 body {
 	background:transparent url(img/north.jpg) no-repeat;
 	background-size:1680px;
+	font-family:comic sans ms;
 }
 h1, p, h2, label {
 	color:white;
+	font-size:16px;
 }
 .form-horizontal .control-label {
 	color:white;
 }
 td, th, tr {
 	color:white;
+	font-size:16px;
 }
 td a {
 	color:white;

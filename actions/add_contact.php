@@ -18,10 +18,10 @@ extract($_POST);
 // refer to, for example, the submitted last name as
 // $contact_lastname instead of $_POST['contact_lastname']
 foreach($required as $r) {
-	if(!isset($_POST[$r]) || $_POST[$r] == '') {
+	if(!isset($_POST[$r]) || $_POST[$r] == ''){
 		$_SESSION['message'] = array(
-				'type' => 'danger',
-				'text' => 'You are a bad man!'
+		'type' => 'danger',
+		'text' => 'You are a bad man!'
 		);
 		$_SESSION['POST'] = $_POST;
 		header('Location:../?p=form_add_contact');
@@ -37,6 +37,9 @@ $conn->query($sql);
 
 // Close DB connection
 $conn->close();
-
+$_SESSION['message'] = array(
+		'type' => 'success',
+		'text' => 'Youve done it Watson!'
+);
 // Redirect to list
 header('Location:../?p=list_contacts');
