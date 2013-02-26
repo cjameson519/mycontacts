@@ -19,6 +19,15 @@
 			<?php echo input('contact_phone','required')?>
 		</div>
 	</div>
+	<div class="control-group">
+	<label class="control-label" for="contact_group">Groups!</label>
+		<select name="group_id">
+			<?php 
+				$options = get_options('group',0,'Select a Group!');
+				echo dropdown('group_id',$options);
+			?>
+		</select>
+	</div>
 <?php //form submission methods, use $_GET or $_POST, $_GET you use when submitting something wont change the server state, $_Post you use if you are changing the Server?>
 	<div class="form-actions">
 		<button type="submit" class="btn btn-success"><i class="icon-plus-sign icon-white"></i>Submit</button>

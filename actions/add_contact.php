@@ -32,14 +32,14 @@ foreach($required as $r) {
 $conn = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 
 // Execute query
-$sql = "INSERT INTO contacts (contact_firstname,contact_lastname,contact_email,contact_phone) VALUES ('$contact_firstname','$contact_lastname','$contact_email','$contact_phone')";
+$sql = "INSERT INTO contacts (contact_firstname,contact_lastname,contact_email,contact_phone,group_id) VALUES ('$contact_firstname','$contact_lastname','$contact_email','$contact_phone','$contact_group')";
 $conn->query($sql);
 
 // Close DB connection
 $conn->close();
 $_SESSION['message'] = array(
 		'type' => 'success',
-		'text' => 'Youve done it Watson!'
+		'text' => 'You`ve done it Watson!'
 );
 // Redirect to list
 header('Location:../?p=list_contacts');
