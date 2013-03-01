@@ -55,3 +55,20 @@ td a {
 select {
 	margin-left:20px;
 }
+nav .input-append button {
+	height:inherit !important;
+}
+.input-append {
+	margin-top:10px;
+}
+section {
+	color:#777;
+}
+h4 {
+	background-color:white;
+	border-radius:6px;
+	padding:9px;
+}
+h4 a button.btn.pull-right {
+	padding:2px;
+}
